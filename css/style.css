@@ -565,7 +565,7 @@ svg path {
   max-width: 1272px;
 }
 
-.header__main-logo {
+.header__logo--main {
   pointer-events: none;
 }
 
@@ -646,17 +646,22 @@ svg path {
   margin: 0;
   margin-bottom: 45px;
   width: 650px;
+  text-transform: lowercase;
 }
 
 .promo__button {
-  padding: 18px 25px;
-  font-size: 18px;
-  line-height: 21px;
+  padding: 18px 25px 16px;
   width: 410px;
   background-color: #00b2ff;
 }
 
-.promo__button--mobile {
+.promo__button-text {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+}
+
+.promo__button-text--mobile {
   display: none;
 }
 
@@ -673,7 +678,6 @@ svg path {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -716,6 +720,10 @@ svg path {
   line-height: 22px;
   margin: 0;
   max-width: 505px;
+}
+
+.benefits__br {
+  display: none;
 }
 
 .description {
@@ -774,6 +782,10 @@ svg path {
   display: none;
 }
 
+.description__hidden--mobile {
+  display: block;
+}
+
 .is-open .description__hidden {
   display: block;
 }
@@ -811,21 +823,19 @@ svg path {
   padding: 0;
   margin: 0;
   margin-bottom: 55px;
-}
-
-.services__desktop-title {
   width: 100%;
   max-width: 1220px;
 }
 
-.services__mobile-title {
+.services__title--mobile {
   display: none;
 }
 
 .services__cards {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -852,6 +862,7 @@ svg path {
   position: absolute;
   bottom: 0;
   right: 0;
+  cursor: pointer;
 }
 
 .services__card:disabled {
@@ -884,7 +895,7 @@ svg path {
 .services__card span {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 29px;
   color: #ffffff;
   position: absolute;
   left: 40px;
@@ -926,7 +937,7 @@ svg path {
   line-height: 51px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   margin-left: -5px;
 }
 
@@ -985,7 +996,7 @@ svg path {
   line-height: 22px;
   color: #ffffff;
   margin: 0;
-  padding: 15px;
+  padding: 10px 14px 13px;
   width: 100%;
   height: 50px;
   background-color: #019bdf;
@@ -1038,7 +1049,7 @@ svg path {
 
 .form textarea {
   height: 155px;
-  padding: 23px 15px;
+  padding: 23px 14px;
   resize: none;
 }
 
@@ -1167,7 +1178,7 @@ input[type="checkbox"]:disabled + label::before {
   align-self: center;
 }
 
-.footer__main-logo {
+.footer__logo--main {
   pointer-events: none;
 }
 
@@ -1250,10 +1261,6 @@ input[type="checkbox"]:disabled + label::before {
   display: block;
 }
 
-.is-open .navigation__lists {
-  display: block;
-}
-
 .navigation__list {
   list-style: none;
   padding: 0;
@@ -1294,10 +1301,6 @@ input[type="checkbox"]:disabled + label::before {
   display: block;
 }
 
-.is-open .contacts__list {
-  display: block;
-}
-
 .contacts__item {
   margin-bottom: 5px;
 }
@@ -1307,7 +1310,7 @@ input[type="checkbox"]:disabled + label::before {
   color: #ffffff;
   opacity: 0.7;
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
 }
 
 .contacts__item a {
@@ -1364,6 +1367,7 @@ input[type="checkbox"]:disabled + label::before {
   padding: 38px 40px 45px;
   margin-top: 145px;
   margin-bottom: 84px;
+  margin-left: -16px;
   background-color: #00b2ff;
   border-radius: 3px;
 }
@@ -1588,6 +1592,12 @@ input[type="checkbox"]:disabled + label::before {
   }
 }
 
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 192dpi), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .promo {
+    background-image: url("../img/content/promo-back-2x.jpg");
+  }
+}
+
 @media (max-width: 1023px) {
   .header {
     position: absolute;
@@ -1637,17 +1647,18 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .promo__button {
+    padding: 16px 25px;
     margin-left: 45px;
   }
 
   .benefits {
-    padding: 80px 6.5%;
+    padding: 81px 6.5% 80px;
   }
 
   .benefits__card {
     padding: 38px 40px 29px;
     max-width: 100%;
-    min-height: auto;
+    min-height: 359px;
   }
 
   .benefits__card svg {
@@ -1694,7 +1705,7 @@ input[type="checkbox"]:disabled + label::before {
     margin-bottom: 37px;
   }
 
-  .services__desktop-title {
+  .services__title--desktop {
     max-width: 100%;
   }
 
@@ -1710,6 +1721,7 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .services__card span {
+    line-height: 30px;
     left: 45px;
     top: 38px;
   }
@@ -1805,10 +1817,6 @@ input[type="checkbox"]:disabled + label::before {
     width: 48%;
     margin: 0;
   }
-
-  .contacts__item p {
-    margin-bottom: 7px;
-  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 192dpi), (max-width: 1023px) and (min-resolution: 2dppx) {
@@ -1857,18 +1865,21 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .promo__button {
-    font-size: 14px;
-    line-height: 16px;
     padding: 12px 30px;
     width: auto;
     margin-left: 0;
   }
 
-  .promo__button--desktop {
+  .promo__button-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .promo__button-text--desktop {
     display: none;
   }
 
-  .promo__button--mobile {
+  .promo__button-text--mobile {
     display: block;
   }
 
@@ -1882,7 +1893,8 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .benefits__card {
-    padding: 30px 25px 56px;
+    padding: 30px 25px 55px;
+    min-height: 100%;
   }
 
   .benefits__card svg {
@@ -1893,13 +1905,19 @@ input[type="checkbox"]:disabled + label::before {
 
   .benefits__card h3 {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 29px;
     margin-bottom: 7px;
   }
 
   .benefits__card p {
     font-size: 14px;
     line-height: 19px;
+    width: 95%;
+    min-height: 127px;
+  }
+
+  .benefits__br {
+    display: block;
   }
 
   .description {
@@ -1934,14 +1952,14 @@ input[type="checkbox"]:disabled + label::before {
     line-height: 19px;
   }
 
-  .description__hidden-mobile {
-    display: none;
-  }
-
   .description__button {
     width: 160px;
     margin-top: 0;
     padding: 10px 14px 8px;
+  }
+
+  .description__hidden--mobile {
+    display: none;
   }
 
   .is-open .description__hidden-mobile {
@@ -1957,6 +1975,14 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .services h2 {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-size: 28px;
     line-height: 40px;
     margin-bottom: 27px;
@@ -1964,17 +1990,17 @@ input[type="checkbox"]:disabled + label::before {
     width: 90%;
   }
 
-  .services__desktop-title {
+  .services__title--desktop {
     display: none;
   }
 
-  .services__mobile-title {
+  .services__title--mobile {
     display: block;
   }
 
   .services__cards {
-    -ms-grid-columns: (270px)[1];
-    grid-template-columns: repeat(1, 270px);
+    -ms-grid-columns: (100%)[1];
+    grid-template-columns: repeat(1, 100%);
     gap: 30px;
   }
 
@@ -1984,7 +2010,8 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .services__card img {
-    width: 270px;
+    height: 250px;
+    width: 100%;
   }
 
   .services__card span {
@@ -2109,6 +2136,10 @@ input[type="checkbox"]:disabled + label::before {
     display: none;
   }
 
+  .is-open .navigation__lists {
+    display: block;
+  }
+
   .navigation__item {
     width: 100%;
   }
@@ -2130,10 +2161,14 @@ input[type="checkbox"]:disabled + label::before {
     display: none;
   }
 
+  .is-open .contacts__list {
+    display: block;
+  }
+
   .contacts__item p {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .contacts__item a {
@@ -2184,12 +2219,6 @@ input[type="checkbox"]:disabled + label::before {
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (min-resolution: 2dppx) {
   .promo {
     background-image: url("../img/content/promo-back-mobile-2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .promo {
-    background-image: url("../img/content/promo-back-2x.jpg");
   }
 }
 
