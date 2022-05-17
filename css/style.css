@@ -625,19 +625,19 @@ template {
 }
 
 @font-face {
-  font-family: "Bebas Neue";
+  font-family: "BN";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: local("Bebas Neue"), url("../fonts/bebas-neue-regular.woff2") format("woff2"), url("../fonts/bebas-neue-regular.woff") format("woff");
+  src: local("BN"), url("../fonts/bebas-neue-regular.woff2") format("woff2"), url("../fonts/bebas-neue-regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Bebas Neue";
+  font-family: "BN";
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: local("Bebas Neue"), url("../fonts/bebas-neue-bold.woff2") format("woff2"), url("../fonts/bebas-neue-bold.woff") format("woff");
+  src: local("BN"), url("../fonts/bebas-neue-bold.woff2") format("woff2"), url("../fonts/bebas-neue-bold.woff") format("woff");
 }
 
 *,
@@ -765,7 +765,7 @@ svg path {
 }
 
 .header__tel {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 26px;
@@ -849,7 +849,7 @@ svg path {
 }
 
 .main-block__fitness-title h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 109px;
   font-weight: 700;
   line-height: 109px;
@@ -861,7 +861,7 @@ svg path {
 }
 
 .main-block__fitness-title span {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 400;
   line-height: 59px;
@@ -948,7 +948,7 @@ svg path {
 }
 
 .gym__description h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
   line-height: 49px;
@@ -1112,7 +1112,7 @@ svg path {
 }
 
 .subscription h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
   line-height: 49px;
@@ -1319,7 +1319,7 @@ svg path {
 }
 
 .crossfit__title h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 90px;
   font-weight: 700;
   line-height: 90px;
@@ -1420,7 +1420,7 @@ svg path {
 }
 
 .coaches h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
   line-height: 49px;
@@ -1605,7 +1605,7 @@ svg path {
 }
 
 .benefits h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
   line-height: 49px;
@@ -1769,7 +1769,7 @@ svg path {
 }
 
 .promo h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
   line-height: 49px;
@@ -1860,9 +1860,10 @@ svg path {
   padding: 23px 28px;
   color: #1c3374;
   max-width: 560px;
-  border: 7px solid transparent;
-  border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
-  border-image-slice: 1;
+  border-style: solid;
+  border-width: 7px;
+  -o-border-image: -o-linear-gradient(301.18deg, #d10a42 0.85%, #00359f 100%) 1;
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
 }
 
 .promo__card br {
@@ -1902,7 +1903,7 @@ svg path {
 }
 
 .comments h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
   line-height: 49px;
@@ -2034,7 +2035,7 @@ svg path {
 }
 
 .connection h2 {
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: "BN", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
   line-height: 49px;
