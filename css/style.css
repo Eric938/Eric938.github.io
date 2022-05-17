@@ -1222,7 +1222,14 @@ svg path {
   padding: 58px 70px 60px;
   max-width: 360px;
   background-color: #ffffff;
-  border: 7px solid transparent;
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 7px;
+}
+
+.subscription__card:active {
+  -o-border-image: -o-linear-gradient(301.18deg, #d10a42 0.85%, #00359f 100%) 1;
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
 }
 
 .subscription__card h3 {
@@ -3618,6 +3625,7 @@ svg path {
     column-gap: 31px;
     width: 100%;
     margin-bottom: 17px;
+    max-width: 400px;
   }
 
   .footer__logo {
